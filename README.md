@@ -24,15 +24,34 @@ It highlights cycles, distinguishes between system and third-party frameworks, s
 
 ---
 
-## 📦 Requirements
+##📦 Requirements
+To run XcodeLibPlot, the following tools must be available on your system:
+🖥️ System Requirements
 
-- macOS with **Xcode Command Line Tools** (`plutil` included)
-- **Graphviz** for PNG/SVG rendering (optional but recommended)
+macOS with Xcode installed
+Python 3.7+ (recommended: Python 3.10 or newer)
 
-```bash
-brew install graphviz
-dot -V
-```
+🔧 Required Tools
+✅ Xcode Command Line Tools
+Used for parsing .pbxproj files via plutil.
+Install with:
+Shellxcode-select --installMostra più linee
+🎯 Graphviz (for rendering PNG/SVG graphs)
+Used to convert .dot files into visual formats like .png and .svg.
+Install via Homebrew:
+Shellbrew install graphvizMostra più linee
+Verify installation:
+Shelldot -VMostra più linee
+
+If Graphviz is not installed, the script will still generate .dot files, but skip image rendering.
+
+
+📚 Python Dependencies
+No external Python packages are required. The script uses only the Python Standard Library, ensuring maximum portability and zero setup.
+
+🧪 Optional (for CI integration)
+
+You can use the --fail-on-cycles flag to make the script return a non-zero exit code if dependency cycles are detected — useful for automated pipelines.
 
 ## 🚀 Quick Usage
 # Analyze an Xcode project and generate dependency graphs
