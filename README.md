@@ -55,3 +55,7 @@ python3 XcodeLibPlot.py --path /path/to/MyApp
 👉 See USAGE_GUIDE.md
  for the full list of parameters.
 
+📄 License
+
+Released under the MIT License.
+You are free to use it in personal or commercial projects, as long as you retain the copyright notice.
